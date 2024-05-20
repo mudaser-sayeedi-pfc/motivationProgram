@@ -1,0 +1,11 @@
+{
+	"deployment": {
+		"name": "motivation_program_basicio",
+		"stack": "node14",
+		"type": "basicio",
+		"env_variables": {}
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

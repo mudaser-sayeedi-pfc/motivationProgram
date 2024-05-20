@@ -1,0 +1,9 @@
+{
+	"name": "motivation_program_basicio",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "mudaser.sayeedi@pfc-group.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}

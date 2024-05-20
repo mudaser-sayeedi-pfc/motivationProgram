@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "targets": [
+      "motivation_program_portal_function",
+      "motivation_program_basicio"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

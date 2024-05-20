@@ -1,0 +1,50 @@
+/* LET THE STYLING BEGIN */
+html{
+    font-family: sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+.signup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+} */
+
+/* #login{
+    background-color: red;
+    overflow: hidden;
+} */
