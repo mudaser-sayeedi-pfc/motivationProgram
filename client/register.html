@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Authorization Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+    <script src="https://static.zohocdn.com/catalyst/sdk/js/4.0.0/catalystWebSDK.js"></script>
+    <script src="/__catalyst/sdk/init.js"></script>
+    <script src="script.js"></script>
+    <script>
+      const config = {
+        css_url: "/app/embeddediframe.css", // Login page customization css file path, if not provided default css will be rendered
+        is_customize_forgot_password: false, // Default value is false. Keep this value as true, if you wish to customize Forgot Password page
+        forgot_password_id: "login", // Element id in which forgot password page should be loaded, by default will render in the "loginDivElementId"
+        forgot_password_css_url: "/app/fpwd.css", // Forgot password page customization css file path, if not provided default css will be rendered
+      };
+      catalyst.auth.signIn("login", config);
+    </script>
+  </head>
+  <body style="background: #f3f3f3" class="">
+    <div class="">
+      <header
+        class="bg-white fixed top-0 left-0 w-full flex justify-center items-center"
+      >
+        <!-- <img
+          width="80px"
+          height="80px"
+          src="https://cdn2.iconfinder.com/data/icons/user-management/512/profile_settings-512.png"
+        />
+        <h1>User Profile Management</h1> -->
+        <div
+          class="h-[80px] w-[100%] max-w-[1286px] flex items-center 2xl:px-0 px-[10px]"
+        >
+          <a href="/" class="text-[1.6rem]">PASSION BRIDGESTONE</a>
+        </div>
+      </header>
+
+      <div
+        class="content flex justify-center mt-28 max-w-4xl min-h-[81vh] 2xl:min-h-[83vh] mx-auto"
+      >
+        <div class="p-8 w-full">
+          <h1 class="text-2xl font-bold text-center mb-6">
+            SIGN UP FOR PASSION. REWARDS AWAIT!
+          </h1>
+          <div class="mb-8">
+            <div class="flex justify-between gap-4">
+              <div class="w-4/5 text-center">
+                <p class="mt-2 text-gray-700">Step 1</p>
+                <div class="h-1 bg-red-500"></div>
+              </div>
+              <div class="w-4/5 text-center">
+                <p class="mt-2 text-gray-400">Step 2</p>
+                <div class="h-1 bg-red-100"></div>
+              </div>
+              <div class="w-4/5 text-center">
+                <p class="mt-2 text-gray-400">Step 3</p>
+                <div class="h-1 bg-red-100"></div>
+              </div>
+            </div>
+          </div>
+          <!-- ------------------------------------------------------------------- -->
+          <!-- <div class="text-center mb-8">
+            <p class="mb-6 text-lg">
+              What type of company are you registering?
+            </p>
+            <div
+              id="companyType"
+              class="border border-gray-300 w-24 mx-auto p-6 inline-block flex flex-col justify-center items-center cursor-pointer hover:border-red-600 transition ease-in-out"
+            >
+              <svg
+                width="27"
+                height="25"
+                viewBox="0 0 27 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25.984 11.8889C25.9717 11.7465 25.6538 11.473 25.5193 11.4242C25.3844 11.3751 25.2334 11.4085 25.132 11.5094L23.0968 13.5446L20.4533 10.9011L22.5292 8.833C22.6308 8.73188 22.6639 8.58145 22.615 8.44733C22.5656 8.31293 22.2396 8.02822 22.0964 8.01589C20.8356 7.90767 19.6003 8.3561 18.7072 9.24599C17.484 10.4647 17.1601 12.2443 17.7337 13.7613C17.671 13.8139 17.6091 13.8696 17.5481 13.9298L10.6187 20.4438C10.6162 20.4462 10.6138 20.4488 10.6112 20.4511C9.79627 21.263 9.79627 22.584 10.6112 23.3961C11.4263 24.2079 12.7426 24.198 13.5573 23.3861C13.5609 23.3828 13.5641 23.3796 13.5673 23.3759L20.0489 16.4189C20.108 16.3597 20.1629 16.2979 20.2146 16.2344C21.7376 16.8069 23.5252 16.4849 24.7494 15.2654C25.6424 14.3755 26.0928 13.1447 25.984 11.8889Z"
+                  stroke="#ED1C24"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M1 23L1.00047 18.8745C1.00073 16.5965 2.88106 14.75 5.20047 14.75H16M15 5.125C15 7.40317 13.1196 9.25 10.8 9.25C8.4804 9.25 6.6 7.40317 6.6 5.125C6.6 2.84683 8.4804 1 10.8 1C13.1196 1 15 2.84683 15 5.125Z"
+                  stroke="#ED1C24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <p class="text-gray-400 text-sm mt-1">Company</p>
+            </div>
+          </div> -->
+          <!-- ------------------------------------------------------------------- -->
+          <div class="max-w-md mx-auto">
+            <form id="companyForm">
+              <div class="mb-4">
+                <label for="activationCode" class="block text-gray-700"
+                  >Do you have an activation code?</label
+                >
+                <input
+                  type="text"
+                  id="activationCode"
+                  class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                  placeholder="Activation code (optional)"
+                />
+              </div>
+              <div class="mb-4">
+                <h3 class="text-md font-semibold text-gray-700 my-10">
+                  Company ID
+                </h3>
+                <label for="companyId" class="block text-gray-700"
+                  >Company ID number
+                  <span class="text-red-600 text-xs">*</span></label
+                >
+                <input
+                  type="text"
+                  id="companyId"
+                  class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                  required
+                />
+                <label for="companyName" class="block text-gray-700 mt-2"
+                  >Company name
+                  <span class="text-red-600 text-xs">*</span></label
+                >
+                <input
+                  type="text"
+                  id="companyName"
+                  class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                  required
+                />
+                <div class="grid grid-cols-4 mt-2 gap-6">
+                  <div class="col-span-4 sm:col-span-2">
+                    <label
+                      for="companyStreet"
+                      class="block text-gray-700 text-sm mt-2 sm:h-[52px] flex flex-col justify-end"
+                      ><p>
+                        Street <span class="text-red-600 text-xs">*</span>
+                      </p></label
+                    >
+                    <input
+                      type="text"
+                      id="companyStreet"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                      required
+                    />
+                  </div>
+                  <div class="col-span-2 sm:col-span-1">
+                    <label
+                      for="companyNumber"
+                      class="block text-gray-700 text-sm sm:h-[60px] flex flex-col justify-end"
+                      ><p>
+                        Number of descriptive
+                        <span class="text-red-600 text-xs">*</span>
+                      </p></label
+                    >
+                    <input
+                      type="text"
+                      id="companyNumber"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                      required
+                    />
+                  </div>
+                  <div class="col-span-2 sm:col-span-1">
+                    <label
+                      for="companyApartment"
+                      class="block text-gray-700 sm:h-[60px] flex flex-col justify-end"
+                      >Apartment number</label
+                    >
+                    <input
+                      type="text"
+                      id="companyApartment"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                    />
+                  </div>
+                </div>
+                <div class="sm:grid grid-cols-3 gap-6">
+                  <div class="col-span-1">
+                    <label for="companyZip" class="block text-gray-700 mt-2"
+                      >ZIP code
+                      <span class="text-red-600 text-xs">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="companyZip"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                      required
+                    />
+                  </div>
+                  <div class="col-span-2">
+                    <label for="companyCity" class="block text-gray-700 mt-2"
+                      >City <span class="text-red-600 text-xs">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="companyCity"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="sm:grid grid-cols-2 gap-20 my-6">
+                  <h3 class="text-md font-semibold text-[#555]">
+                    Enter the address of the establishment
+                  </h3>
+                  <button
+                    type="button"
+                    id="copyButton"
+                    class="bg-[#555] h-6 text-white px-2 py-[1px] text-[12px] font-semibold mt-2 hover:bg-gray-700"
+                  >
+                    COPY THE DATA ABOVE
+                  </button>
+                </div>
+                <label for="establishmentName" class="block text-gray-700 mt-2"
+                  >Name of establishment
+                  <span class="text-red-600 text-xs">*</span></label
+                >
+                <input
+                  type="text"
+                  id="establishmentName"
+                  class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                  required
+                />
+                <div class="grid grid-cols-4 mt-2 gap-6">
+                  <div class="col-span-4 sm:col-span-2">
+                    <label
+                      for="companyStreet"
+                      class="block text-gray-700 text-sm mt-2 sm:h-[52px] flex flex-col justify-end"
+                      ><p>
+                        Street <span class="text-red-600 text-xs">*</span>
+                      </p></label
+                    >
+                    <input
+                      type="text"
+                      id="companyStreet"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                      required
+                    />
+                  </div>
+                  <div class="col-span-2 sm:col-span-1">
+                    <label
+                      for="companyNumber"
+                      class="block text-gray-700 text-sm sm:h-[60px] flex flex-col justify-end"
+                      ><p>
+                        Number of descriptive
+                        <span class="text-red-600 text-xs">*</span>
+                      </p></label
+                    >
+                    <input
+                      type="text"
+                      id="companyNumber"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                      required
+                    />
+                  </div>
+                  <div class="col-span-2 sm:col-span-1">
+                    <label
+                      for="companyApartment"
+                      class="block text-gray-700 sm:h-[60px] flex flex-col justify-end"
+                      >Apartment number</label
+                    >
+                    <input
+                      type="text"
+                      id="companyApartment"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                    />
+                  </div>
+                </div>
+                <div class="sm:grid grid-cols-3 gap-6">
+                  <div class="col-span-1">
+                    <label for="companyZip" class="block text-gray-700 mt-2"
+                      >ZIP code
+                      <span class="text-red-600 text-xs">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="companyZip"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                      required
+                    />
+                  </div>
+                  <div class="col-span-2">
+                    <label for="companyCity" class="block text-gray-700 mt-2"
+                      >City <span class="text-red-600 text-xs">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="companyCity"
+                      class="w-full px-3 py-2 border border-gray-500 mt-1 bg-[#f3f3f3] text-gray-700 text-sm"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <input type="checkbox" id="sameAddress" class="mr-1" />
+                  <label for="sameAddress" class="text-gray-700 text-[11px] font-semibold" 
+                    >The correspondence address is the same as the address of
+                    the establishment</label
+                  >
+                </div>
+              </div>
+              <div class="sm:grid grid-cols-2 gap-2 my-6">
+                <p class="text-sm text-gray-600 my-3 sm:my-0">Does your company have more than 1 location? Add them all!</p>
+                <button
+                  type="button"
+                  id="addLocation"
+                  class="bg-[#555] h-6 text-white px-2 py-[1px] text-xs font-semibold mt-2 hover:bg-gray-700"
+                >
+                  ADD ANOTHER ESTABLISHMENT
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- ------------------------------------------------------------------- -->
+          <div>
+            
+          </div>
+          <!-- ------------------------------------------------------------------- -->
+
+
+          <div class="flex justify-center gap-6 mb-10">
+            <button
+              id="backButton"
+              class="bg-red-600 text-white px-4 py-1 hover:bg-red-800 text-xs font-semibold"
+            >
+              < BACK
+            </button>
+            <button
+              id="backButton"
+              class="bg-red-600 text-white px-4 py-1 hover:bg-red-800 text-xs font-semibold"
+            >
+              NEXT >
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg-white flex justify-center items-center">
+        <!-- <img
+          width="80px"
+          height="80px"
+          src="https://cdn2.iconfinder.com/data/icons/user-management/512/profile_settings-512.png"
+        />
+        <h1>User Profile Management</h1> -->
+        <div
+          class="h-[67.99px] w-[100%] max-w-[1286px] flex items-center 2xl:px-0 px-[10px]"
+        >
+          <img src="./assets/logo-sign.b2b55384.png" alt="company logo" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
