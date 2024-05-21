@@ -129,7 +129,7 @@ body {
   /* background-color: green; */
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   padding-left: 4rem;
 }
 
@@ -220,12 +220,15 @@ body {
 }
 .text16 {
   display: block;
-  text-align: center;
+  /* text-align: center; */
+  text-align: right;
   margin-bottom: 30px;
   color: #626262;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
+  /* font-size: 16px; */
+  font-size: 10px;
+  /* font-weight: 500; */
+  font-weight: 400;
+  text-decoration: underline;
 }
 .checkbox {
   float: left;
@@ -304,6 +307,7 @@ body {
 .signin_head {
   display: block;
   font-size: 24px;
+  /* font-size: 40px; */
   font-weight: 500;
   margin-bottom: 30px;
   line-height: 30px;
@@ -342,7 +346,8 @@ body {
   font-size: 34px;
   color: #a7a7a7;
   position: relative;
-  top: -39px;
+  /* top: -39px; */
+  top: -35px;
   right: 13px;
   float: right;
   cursor: pointer;
@@ -362,20 +367,24 @@ body {
 .textbox {
   display: block;
   width: 100%;
-  height: 44px;
+  /* height: 44px; */
+  height: 35.9961px;
   box-sizing: border-box;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   text-indent: 12px;
   font-size: 16px;
   outline: none;
   border: none;
   padding-right: 12px;
   transition: all 0.2s ease-in-out;
-  background: #f1f1f1;
-  border: 1px solid #e4e4e4;
+  /* background: #f1f1f1; */
+  background: none;
+  /* border: 1px solid #e4e4e4; */
+  border: 1px solid #555;
 }
 .textbox:valid {
-  border: 2px solid #f4f6f8;
+  /* border: 2px solid #f4f6f8; */
+  border: 1px solid #555;
 }
 .textindent42 {
   text-indent: 36px;
@@ -407,17 +416,20 @@ input[type="number"] {
 .btn {
   cursor: pointer;
   display: block;
-  width: 100%;
-  height: 44px;
-  border-radius: 4px;
+  padding: 4px 10px;
+  /* width: 100%; */
+  /* height: 44px; */
+  /* border-radius: 4px; */
   letter-spacing: 0.5;
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: 12px;
   font-weight: 600;
   outline: none;
   border: none;
-  margin: auto;
+  margin-left: auto;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  margin-bottom: 15px;
   transition: all 0.2s ease-in-out;
 }
 .signupbtn {
@@ -426,7 +438,8 @@ input[type="number"] {
 }
 .blue {
   box-shadow: 0px 2px 2px #fff;
-  background-color: #159aff;
+  /* background-color: #159aff; */
+  background-color: #ed1c24;
   color: #fff;
 }
 .grey {
@@ -440,7 +453,8 @@ input[type="number"] {
   color: #fff;
 }
 .blue:hover {
-  background-color: #0966c2;
+  /* background-color: #0966c2; */
+  background-color: #c61017;
   cursor: pointer;
   box-shadow: 0px 2px 2px rgba(90, 183, 254, 0.2);
 }
@@ -1196,7 +1210,7 @@ s #terminate_session_form .checkbox_check:checked ~ .checkbox {
   top: 2px;
   box-shadow: 0px 0px 5px #999;
 }
-/* @media only screen and (-webkit-min-device-pixel-ratio: 2),
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
   not all,
   not all,
   not all,
@@ -1248,7 +1262,7 @@ s #terminate_session_form .checkbox_check:checked ~ .checkbox {
     background-size: 205px auto;
     background-position: -152px -174px;
   }
-} */
+}
 
 @media only screen and (max-width: 600px) {
   body {
@@ -1261,12 +1275,12 @@ s #terminate_session_form .checkbox_check:checked ~ .checkbox {
   }
   .signin_container {
     /* width: 100%; */
-    width: fit;
-    box-shadow: none;
+    /* width: fit-content; */
+    /* box-shadow: none; */
     /* margin: 0 auto; */
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+    /* position: relative; */
+    /* z-index: 1; */
+    /* overflow: hidden; */
   }
   #captcha_img,
   #captcha,
@@ -1281,7 +1295,14 @@ s #terminate_session_form .checkbox_check:checked ~ .checkbox {
     -moz-appearance: none;
     appearance: none;
   }
-  .textbox,
+  /* .textbox,
+  #verify_totp {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #f4f6f8;
+    text-indent: 0px;
+    border-radius: 0px;
+  } */
   #verify_totp {
     background-color: transparent;
     border: none;
@@ -1289,7 +1310,11 @@ s #terminate_session_form .checkbox_check:checked ~ .checkbox {
     text-indent: 0px;
     border-radius: 0px;
   }
-  .textbox:focus,
+  /* .textbox:focus,
+  #verify_totp {
+    border: none;
+    border-bottom: 2px solid #159aff;
+  } */
   #verify_totp {
     border: none;
     border-bottom: 2px solid #159aff;
@@ -1462,13 +1487,14 @@ s #terminate_session_form .checkbox_check:checked ~ .checkbox {
   padding-top: 20px;
 }
 #login_id {
-  text-indent: 0 !important;
+  /* text-indent: 0 !important; */
 }
 .showcountry_code {
   display: none !important;
 }
 #headtitle {
-  color: #159aff;
+  /* color: #159aff; */
+  color: #555555;
 }
 .signin_container {
   margin-top: 5px;
